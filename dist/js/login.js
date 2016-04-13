@@ -1,0 +1,1 @@
+function toshow(){alert("Erer")}console.log("ereeerr");
