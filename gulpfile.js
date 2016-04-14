@@ -1,5 +1,5 @@
 /*
-安装 npm install gulp-compass gulp-autoprefixer gulp-clean-css gulp-watch browser-sync gulp-uglify
+安装 npm install gulp-compass gulp-autoprefixer gulp-clean-css gulp-watch browser-sync gulp-uglify gulp-imagemin imagemin-pngquant
 CSS部分自动功能： sass 生成 css 后 autoprefixer 后 再压缩
 
 图片压缩功能：
@@ -74,21 +74,21 @@ gulp.task('copyjs',function(){
 	.pipe(gulp.dest('dist/js'));
 });
 
-// var imagemin = require('gulp-imagemin'),
-//     //确保本地已安装imagemin-pngquant [cnpm install gulp-imagemin imagemin-pngquant --save-dev]
-//     pngquant = require('imagemin-pngquant');
+var imagemin = require('gulp-imagemin'),
+    //确保本地已安装imagemin-pngquant [npm install gulp-imagemin imagemin-pngquant --save-dev]
+    pngquant = require('imagemin-pngquant');
 
-// gulp.task('Imagemin', function() {
-//     gulp.src('./images/**/*.{png,jpg,gif,ico}')
-//         .pipe(imagemin({
-//             progressive: true,
-//             svgoPlugins: [{
-//                 removeViewBox: false
-//             }], //不要移除svg的viewbox属性
-//             use: [pngquant()] //使用pngquant深度压缩png图片的imagemin插件
-//         }))
-//         .pipe(gulp.dest('dist/images'));
-// });
+gulp.task('image', function() {
+    gulp.src('./images/**/*.{png,jpg,gif,ico}')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }], //不要移除svg的viewbox属性
+            use: [pngquant()] //使用pngquant深度压缩png图片的imagemin插件
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
 
 
 
