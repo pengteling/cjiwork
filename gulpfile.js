@@ -1,5 +1,5 @@
 /*
-安装 npm install gulp-compass gulp-autoprefixer gulp-clean-css gulp-watch browser-sync gulp-uglify gulp-imagemin imagemin-pngquant
+安装 npm install gulp-compass gulp-autoprefixer gulp-clean-css gulp-watch browser-sync gulp-uglify gulp-imagemin imagemin-pngquant gulp-htmlmin
 CSS部分自动功能： sass 生成 css 后 autoprefixer 后 再压缩
 
 图片压缩功能：
@@ -50,6 +50,10 @@ gulp.task('watchjs', function() {
     gulp.watch('./js/*.js', ['js']);
 });
 
+gulp.task('watchhtml', function() {
+    gulp.watch('./*.html', ['html']);
+});
+
 /*实时监测 浏览器实时变化*/
 var browserSync = require('browser-sync');
 gulp.task('browser-sync', function() {
@@ -60,13 +64,13 @@ gulp.task('browser-sync', function() {
     ];
     browserSync.init(files, {
         server: {
-            baseDir: './'
+            baseDir: './dist'
         }
     });
 });
 
 
-gulp.task('default',['copyjs','watchcss','watchjs','browser-sync']);
+gulp.task('default',['watchhtml','copyjs','watchcss','watchjs','browser-sync']);
 
 //拷贝插件到生成的js目录
 gulp.task('copyjs',function(){
@@ -92,10 +96,10 @@ gulp.task('image', function() {
 
 
 
-// var htmlmin = require('gulp-htmlmin');  //压缩html
+var htmlmin = require('gulp-htmlmin');  //压缩html
 
-// gulp.task('minify', function() {
-//   return gulp.src('app/*.html')
-//     .pipe(htmlmin({collapseWhitespace: true}))
-//     .pipe(gulp.dest('dist'))
-// });
+gulp.task('html', function() {
+  return gulp.src('*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'))
+});

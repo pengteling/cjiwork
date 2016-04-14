@@ -1,5 +1,258 @@
 /* 安装 gem install compass-normalize  */
-@import "normalize","compass/css3","mixin";
+@import "normalize","compass/css3","mixin","comm";
 body{	
 	font-family: "Tahoma","Arial","Microsoft YaHei", "SimHei", "SimSun";	
+}
+.header{
+	.head1{		
+		height: 44px;
+		background: #eee;
+		line-height: 44px;
+		font-size: 12px;
+		@extend .fontsong;
+		color: #777;
+		a{			
+			vertical-align: middle;
+			display: inline-block;
+			padding:0 16px;
+			position: relative;
+			color: #777;
+			/* border-right:#cfcfcf 1px solid; */
+			&::before{
+				content: "";
+				position: absolute;
+				width:1px;
+				height: 12px;
+				background:#cfcfcf;
+				left: 0;
+				top:16px;
+			}
+			span.tel{
+				color: #758fc8;font-size:14px;
+				font-family: Arial;
+				font-weight: bold;
+			}
+		}
+		.ico-app{
+			vertical-align: text-bottom;
+			display: inline-block;
+			margin-right: 9px;
+			width:9px;
+			height: 16px;
+			background:url(../images/ico-mobile.png);
+		}
+		.fl{
+			margin-left: 12px;			
+		}
+		.fr{
+			margin-right: 50px;
+		}
+	}
+	.head2{		
+		.logo{
+			width:540px;
+			height: 100px;
+			background:url(../images/logo.jpg);
+			a{
+				@extend .block;
+			}
+		}
+		.nav{
+			position:absolute;
+			right:0;
+			top: 40px;
+			height: 100px;
+			.navli {
+				  display: inline-block;
+				  margin-right: 54px;
+				  height: 20px;
+				  overflow: hidden;	
+				  p{
+				  	position:relative;
+				  	@extend .reset;
+				  }			  
+				}
+				.navli a {
+				  color: #333;
+				  font-weight: bold;
+				  font-size: 16px;
+				  height: 20px;
+				  line-height: 20px;
+				  @extend .block;
+				}
+				.navli a.a1 {
+				  color: #758fc8;
+				}
+		}
+
+	}
+}
+.login-main{
+	height:581px;
+	background:url(../images/banner-login.jpg) top center no-repeat;
+	.login-container{
+		width:352px;
+		padding:0 49px;
+		height: 480px;
+		position:absolute;
+		right:175px;
+		top:52px;
+		background:rgba(255,255,255,0.8);
+		background:#fff\9;		/* ie8 hacker */
+		border-radius:5px;
+		box-shadow:1px 1px 3px #888,-1px 0px 3px #888;
+		h3{
+			text-align: center;
+			line-height: 90px;
+			padding-top: 25px;
+			font-size: 30px;
+			font-weight: bolder;
+			
+		}
+		.ipt-user,.ipt-pwd{
+			width:282px;
+			padding-left: 70px;
+			height: 56px;			
+			line-height: 56px;
+			color:#fff;
+			
+			margin-bottom: 19px;
+			box-shadow:2px 3px 3px #888,-1px 0px 3px #888;
+		}
+		.ipt-user{
+			background:url(../images/ico-user.png) 14px 14px no-repeat #40424d; 
+		}
+		.ipt-pwd{
+			background:url(../images/ico-pwd.png) 14px 14px no-repeat #40424d; 
+		}
+		.ipt-submit{
+			width:352px;
+			height: 56px;
+			
+			background:#5c84dd;
+			line-height: 56px;
+			font-size: 18px;
+			color: #fffefe;
+			letter-spacing: 5px;
+			box-shadow:2px 3px 3px #888,-1px 0px 3px #888;
+		}
+		.splitline{
+			margin-top: 38px;
+			color: #777;
+			font-size: 16px;
+			height: 16px;
+			line-height: 16px;
+			text-align: center;
+			position:relative;
+			letter-spacing: 3px;
+			font-family: Arial;
+			.hr1,.hr2{
+				position:absolute;
+				display: block;				
+				width:142px;
+				height: 1px;
+				background:#777;
+				top:7px;
+
+			}
+			.h1{
+				left: 0;
+			}
+			.hr2{
+				right:0
+			}
+			
+
+		}
+		.somemore{
+			margin-top: 22px;
+			font-size:18px;
+			color: #393b46;
+			a{
+				color: #3a438e
+			}
+		}
+	}
+}
+.footer{
+	background:#1c2124;
+
+	.foot{
+		overflow:hidden;
+		height: 199px;
+		color: #999;	
+		font-size: 18px;
+		a{
+			color: #999;
+		}
+		.subtit{
+			padding-top: 46px;
+			line-height: 34px;
+		}	
+		.foot-1of4{
+			float:left;
+			width:260px;
+			margin-left: 89px;
+			margin-right: 60px;
+			.tel{
+				font-size: 26px;
+				font-family: Arial;
+				color: #6d8bcc;
+				line-height: 36px;
+			}
+			
+			.addr,.email{
+				line-height: 24px;
+				font-size: 14px;
+			}
+		}
+		.foot-2of4{
+			float: left;
+			width:300px;
+			margin-right: 50px;
+			.xm a{
+				display: inline-block;
+				float:left;
+				margin-right: 18px;
+				line-height: 34px;
+			}
+		}
+		.foot-3of4{
+			float:left;
+			width:200px;
+			margin-right: 50px;
+			.about a{
+				display: inline-block;
+				float:left;
+				margin-right: 18px;
+				line-height: 34px;
+			}
+		}
+		.foot-4of4{
+			float:left;
+			width:76px;
+			padding-top: 56px;
+			.gjlogo{
+				display: block;
+				width:66px;
+				height: 40px;
+				background:url(../images/gjlogo.png) no-repeat;
+				padding-top: 48px;
+				line-height: 34px;
+				font-size: 16px;
+				color: #758fc8;
+			}
+		}
+		
+	}
+	.copyright{
+		height: 70px;
+		background:#141719;
+		line-height: 70px;
+		text-align: center;
+		color: #8a8b8d;
+		a{
+			color: #8a8b8d;
+		}
+	}
 }

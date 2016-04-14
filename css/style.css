@@ -228,6 +228,282 @@ th {
   padding: 0;
 }
 
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fontsong, .header .head1 {
+  font-family: "SimSun","宋体";
+}
+
+.yahei {
+  font-family: "Microsoft YaHei", "微软雅黑","SimHei";
+}
+
+.block, .header .head2 .logo a, .header .head2 .nav .navli a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.reset, .header .head2 .nav .navli p, p, h1, h2, h3, h4, input, ul, li {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 body {
   font-family: "Tahoma","Arial","Microsoft YaHei", "SimHei", "SimSun";
+}
+
+.header .head1 {
+  height: 44px;
+  background: #eee;
+  line-height: 44px;
+  font-size: 12px;
+  color: #777;
+}
+.header .head1 a {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 0 16px;
+  position: relative;
+  color: #777;
+  /* border-right:#cfcfcf 1px solid; */
+}
+.header .head1 a::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  background: #cfcfcf;
+  left: 0;
+  top: 16px;
+}
+.header .head1 a span.tel {
+  color: #758fc8;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+}
+.header .head1 .ico-app {
+  vertical-align: text-bottom;
+  display: inline-block;
+  margin-right: 9px;
+  width: 9px;
+  height: 16px;
+  background: url(../images/ico-mobile.png);
+}
+.header .head1 .fl {
+  margin-left: 12px;
+}
+.header .head1 .fr {
+  margin-right: 50px;
+}
+.header .head2 .logo {
+  width: 540px;
+  height: 100px;
+  background: url(../images/logo.jpg);
+}
+.header .head2 .nav {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  height: 100px;
+}
+.header .head2 .nav .navli {
+  display: inline-block;
+  margin-right: 54px;
+  height: 20px;
+  overflow: hidden;
+}
+.header .head2 .nav .navli p {
+  position: relative;
+}
+.header .head2 .nav .navli a {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+}
+.header .head2 .nav .navli a.a1 {
+  color: #758fc8;
+}
+
+.login-main {
+  height: 581px;
+  background: url(../images/banner-login.jpg) top center no-repeat;
+}
+.login-main .login-container {
+  width: 352px;
+  padding: 0 49px;
+  height: 480px;
+  position: absolute;
+  right: 175px;
+  top: 52px;
+  background: rgba(255, 255, 255, 0.8);
+  background: #fff\9;
+  /* ie8 hacker */
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #888,-1px 0px 3px #888;
+}
+.login-main .login-container h3 {
+  text-align: center;
+  line-height: 90px;
+  padding-top: 25px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.login-main .login-container .ipt-user, .login-main .login-container .ipt-pwd {
+  width: 282px;
+  padding-left: 70px;
+  height: 56px;
+  line-height: 56px;
+  color: #fff;
+  margin-bottom: 19px;
+  box-shadow: 2px 3px 3px #888,-1px 0px 3px #888;
+}
+.login-main .login-container .ipt-user {
+  background: url(../images/ico-user.png) 14px 14px no-repeat #40424d;
+}
+.login-main .login-container .ipt-pwd {
+  background: url(../images/ico-pwd.png) 14px 14px no-repeat #40424d;
+}
+.login-main .login-container .ipt-submit {
+  width: 352px;
+  height: 56px;
+  background: #5c84dd;
+  line-height: 56px;
+  font-size: 18px;
+  color: #fffefe;
+  letter-spacing: 5px;
+  box-shadow: 2px 3px 3px #888,-1px 0px 3px #888;
+}
+.login-main .login-container .splitline {
+  margin-top: 38px;
+  color: #777;
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  position: relative;
+  letter-spacing: 3px;
+  font-family: Arial;
+}
+.login-main .login-container .splitline .hr1, .login-main .login-container .splitline .hr2 {
+  position: absolute;
+  display: block;
+  width: 142px;
+  height: 1px;
+  background: #777;
+  top: 7px;
+}
+.login-main .login-container .splitline .h1 {
+  left: 0;
+}
+.login-main .login-container .splitline .hr2 {
+  right: 0;
+}
+.login-main .login-container .somemore {
+  margin-top: 22px;
+  font-size: 18px;
+  color: #393b46;
+}
+.login-main .login-container .somemore a {
+  color: #3a438e;
+}
+
+.footer {
+  background: #1c2124;
+}
+.footer .foot {
+  overflow: hidden;
+  height: 199px;
+  color: #999;
+  font-size: 18px;
+}
+.footer .foot a {
+  color: #999;
+}
+.footer .foot .subtit {
+  padding-top: 46px;
+  line-height: 34px;
+}
+.footer .foot .foot-1of4 {
+  float: left;
+  width: 260px;
+  margin-left: 89px;
+  margin-right: 60px;
+}
+.footer .foot .foot-1of4 .tel {
+  font-size: 26px;
+  font-family: Arial;
+  color: #6d8bcc;
+  line-height: 36px;
+}
+.footer .foot .foot-1of4 .addr, .footer .foot .foot-1of4 .email {
+  line-height: 24px;
+  font-size: 14px;
+}
+.footer .foot .foot-2of4 {
+  float: left;
+  width: 300px;
+  margin-right: 50px;
+}
+.footer .foot .foot-2of4 .xm a {
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+  line-height: 34px;
+}
+.footer .foot .foot-3of4 {
+  float: left;
+  width: 200px;
+  margin-right: 50px;
+}
+.footer .foot .foot-3of4 .about a {
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+  line-height: 34px;
+}
+.footer .foot .foot-4of4 {
+  float: left;
+  width: 76px;
+  padding-top: 56px;
+}
+.footer .foot .foot-4of4 .gjlogo {
+  display: block;
+  width: 66px;
+  height: 40px;
+  background: url(../images/gjlogo.png) no-repeat;
+  padding-top: 48px;
+  line-height: 34px;
+  font-size: 16px;
+  color: #758fc8;
+}
+.footer .copyright {
+  height: 70px;
+  background: #141719;
+  line-height: 70px;
+  text-align: center;
+  color: #8a8b8d;
+}
+.footer .copyright a {
+  color: #8a8b8d;
 }
