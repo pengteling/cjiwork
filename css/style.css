@@ -266,8 +266,13 @@ a {
   border: 0;
 }
 
+ul, li, ol {
+  list-style: none;
+}
+
 body {
   font-family: "Tahoma","Arial","Microsoft YaHei", "SimHei", "SimSun";
+  min-width: 1200px;
 }
 
 .header .head1 {
@@ -506,4 +511,101 @@ body {
 }
 .footer .copyright a {
   color: #8a8b8d;
+}
+
+.fullSlide {
+  position: relative;
+  background: #000;
+  margin: 0 auto;
+}
+
+.fullSlide .bd {
+  position: relative;
+  z-index: 0;
+}
+
+.fullSlide .bd li img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.fullSlide .hd {
+  position: absolute;
+  z-index: 1;
+  right: 12%;
+  top: 50%;
+  margin-top: -40px;
+}
+
+.fullSlide .hd ul li {
+  width: 8px;
+  height: 8px;
+  margin-bottom: 29px;
+  border: 1px #fff solid;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  text-indent: -99999px;
+}
+
+.fullSlide .hd ul .on {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin-left: -5px;
+  border: 2px #fff solid;
+}
+
+.fullSlide .bd li {
+  position: relative;
+}
+.fullSlide .bd li .layers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.fullSlide .bd li .layers .main {
+  height: 100%;
+  position: relative;
+}
+.fullSlide .bd li .mengban {
+  position: absolute;
+  width: 757px;
+  height: 220px;
+  background: url(../images/mb-banner.png);
+  left: 0;
+  top: 41.52%;
+  z-index: 1;
+  animation-duration: 0.75s;
+  animation-delay: 0.5s;
+}
+.fullSlide .bd li a {
+  animation-duration: 0.5s;
+  animation-delay: 1.25s;
+  display: block;
+  position: absolute;
+  width: 760px;
+  height: 222px;
+  z-index: 2;
+  background: url(../images/bd-banner.png);
+  left: 31px;
+  top: 41.52%;
+  margin-top: 32px;
+}
+.fullSlide .bd li a .tit {
+  font-size: 36px;
+  color: #fff;
+  line-height: 76px;
+  padding-left: 25px;
+  animation-duration: 0.3s;
+  animation-delay: 1.75s;
+}
+.fullSlide .bd li a .intro {
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+  padding: 0 103px 0 15px;
+  animation-duration: 0.5s;
+  animation-delay: 2.25s;
 }

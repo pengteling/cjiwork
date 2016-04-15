@@ -9,6 +9,14 @@ $(function(){
     });
 })
 $(function(){
+    $(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold", vis:"auto", autoPlay:true, autoPage:true, trigger:"click",interTime:8000,startFun:function(i,c){
+            $(".fullSlide .mengban").animateCss("bounceInDown");
+            $(".fullSlide a").animateCss("bounceInLeft");
+            $(".fullSlide a .tit").animateCss("fadeInUp");
+            $(".fullSlide a .intro").animateCss("fadeInUp");
+    } });
+})
+$(function(){
 
     function code(){
         var _this = $(this);

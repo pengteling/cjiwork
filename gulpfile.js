@@ -58,7 +58,7 @@ gulp.task('watchhtml', function() {
 var browserSync = require('browser-sync');
 gulp.task('browser-sync', function() {
     var files = [
-        '**/*.html',
+        'dist/*.html',
         'dist/css/**/*.css',
         'dist/js/**/*.js'
     ];
@@ -70,7 +70,7 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task('default',['watchhtml','copyjs','watchcss','watchjs','browser-sync']);
+gulp.task('default',['js','image','watchhtml','copyjs','watchcss','watchjs','browser-sync']);
 
 //拷贝插件到生成的js目录
 gulp.task('copyjs',function(){
