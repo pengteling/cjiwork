@@ -9,7 +9,8 @@ $(function(){
     });
 })
 $(function(){
-    $(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold", vis:"auto", autoPlay:true, autoPage:true, trigger:"click",interTime:8000,startFun:function(i,c){
+    //vis:"auto"
+    $(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop", vis:"auto", autoPlay:true, autoPage:true, trigger:"click",interTime:8000,startFun:function(i,c){
             $(".fullSlide .mengban").animateCss("bounceInDown");
             $(".fullSlide a").animateCss("bounceInLeft");
             $(".fullSlide a .tit").animateCss("fadeInUp");
@@ -44,3 +45,6 @@ $(function(){
 
 });
 
+$(function(){
+    $(".i-xm").slide({titCell:".tabtit a",mainCell:".tabcon"});
+})

@@ -236,6 +236,7 @@ th {
 
 a {
   text-decoration: none;
+  color: #323433;
 }
 
 .fl {
@@ -260,7 +261,7 @@ a {
   height: 100%;
 }
 
-.reset, .header .head2 .nav .navli p, p, h1, h2, h3, h4, input, ul, li {
+.reset, .header .head2 .nav .navli p, p, h1, h2, h3, h4, input, ul, li, img {
   padding: 0;
   margin: 0;
   border: 0;
@@ -608,4 +609,107 @@ body {
   padding: 0 103px 0 15px;
   animation-duration: 0.5s;
   animation-delay: 2.25s;
+}
+
+.i-xm .tabtit {
+  width: 810px;
+  border-bottom: #999 1px solid;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+  padding-top: 42px;
+}
+.i-xm .tabtit a {
+  font-size: 18px;
+  color: #323433;
+  margin: 0 12px;
+}
+.i-xm .tabtit a.on {
+  color: #3467dc;
+}
+.i-xm .tabcon ul {
+  margin-top: 77px;
+  overflow: hidden;
+}
+.i-xm .tabcon li {
+  float: left;
+  margin: 0 15px;
+  text-align: center;
+}
+.i-xm .tabcon li .pic {
+  width: 370px;
+  height: 277px;
+  transition: all 0.3s ease-in;
+}
+.i-xm .tabcon li .pic img {
+  width: 100%;
+  height: 100%;
+}
+.i-xm .tabcon li:hover .pic {
+  transform: scale(1.03);
+  box-shadow: 3px 5px 8px #ccc,-2px 0px 8px #eee;
+}
+.i-xm .tabcon li .tit {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.i-xm .tabcon li .time-views {
+  line-height: 34px;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 35px;
+}
+.i-xm .tabcon li .time-views .time {
+  display: inline-block;
+  height: 16px;
+  background: url(../images/ico-clock.png) no-repeat;
+  line-height: 16px;
+  padding-left: 19px;
+  margin-right: 18px;
+}
+.i-xm .tabcon li .time-views .views {
+  display: inline-block;
+  height: 16px;
+  background: url(../images/ico-eye.png) no-repeat;
+  line-height: 16px;
+  padding-left: 21px;
+}
+
+.index-ad {
+  width: 100%;
+  display: flex;
+  font-size: 0;
+  /* 修正间距 */
+}
+.index-ad .ad {
+  flex: 1;
+  width: 33.3%;
+  overflow: hidden;
+  float: left\9;
+}
+.index-ad .ad img {
+  width: 100%;
+}
+
+.about {
+  background: #1c2124;
+  height: 354px;
+  border-bottom: #2c3133 2px solid;
+  overflow: hidden;
+}
+.about .fl {
+  margin: 114px 0 0 90px;
+  width: 498px;
+  color: #999;
+}
+.about .fl .subtit {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.about .fl .intro {
+  font-size: 14px;
+  line-height: 24px;
+}
+.about .fr {
+  margin: 78px 28px 0 0;
 }
