@@ -25,7 +25,7 @@ gulp.task('css', function() {
     }))
     .pipe(autoprefixer({
             browsers: ['> 1%', 'last 3 versions'],
-            flexbox: 'no-2009',
+            flexbox: 'false',
             cascade: false
         }))
     .pipe(cleanCSS())
@@ -69,9 +69,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-
 gulp.task('default',['js','image','watchhtml','copyjs','watchcss','watchjs','browser-sync']);
-
 //拷贝插件到生成的js目录
 gulp.task('copyjs',function(){
 	gulp.src('./bower_components/jquery/dist/*.min.js')	
@@ -80,7 +78,7 @@ gulp.task('copyjs',function(){
 
 var imagemin = require('gulp-imagemin'),
     //确保本地已安装imagemin-pngquant [npm install gulp-imagemin imagemin-pngquant --save-dev]
-    pngquant = require('imagemin-pngquant');
+pngquant = require('imagemin-pngquant');
 
 gulp.task('image', function() {
     gulp.src('./images/**/*.{png,jpg,gif,ico}')
@@ -94,10 +92,7 @@ gulp.task('image', function() {
         .pipe(gulp.dest('dist/images'));
 });
 
-
-
 var htmlmin = require('gulp-htmlmin');  //压缩html
-
 gulp.task('html', function() {
   return gulp.src('*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
