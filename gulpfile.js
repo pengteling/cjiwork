@@ -98,3 +98,28 @@ gulp.task('html', function() {
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'))
 });
+
+
+// var rev = require('gulp-rev');
+ 
+// gulp.task('rev', function () {
+//     return gulp.src(['css/*.css','js/*.js'])
+//         .pipe(rev())
+//         .pipe(gulp.dest('dist'))
+//             .pipe(rev.manifest())
+//         .pipe(gulp.dest('dist/rev')); // write manifest to build dir ;
+// });
+
+// var revCollector = require('gulp-rev-collector'); 
+// gulp.task('replace', function () {
+//     return gulp.src(['dist/rev/*.json','./*.html'])
+//         .pipe( revCollector({
+//             replaceReved: true,
+//             dirReplacements: {
+//                 'dist/css/': 'css/',
+//                 'dist/js/': 'js/'                
+//             }
+//         }) )       
+//         //.pipe(htmlmin({collapseWhitespace: true}))
+//         .pipe( gulp.dest('dist') );
+// });

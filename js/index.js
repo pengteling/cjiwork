@@ -25,24 +25,14 @@ $(function(){
 
         _this.children().wrapAll('<p></p>');
         _this.children('p').append(_html).children(':last').addClass('a1');
-
-
-
     }
-
-
     $('.nav .navli').each(code);
-
     $('.nav .navli').hover(function(){
         var h =-$(this).height();
         $(this).children("p").stop(true,true).animate({'top':h},300)
     },function(){
         $(this).children("p").stop(true,true).animate({'top':'0px'},300)
     });
-
-
-    
-
 });
 
 $(function(){
