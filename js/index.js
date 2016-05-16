@@ -36,5 +36,13 @@ $(function(){
 });
 
 $(function(){
-    $(".i-xm").slide({titCell:".tabtit a",mainCell:".tabcon"});
+    $("#index-xm").slide({titCell:".tabtit a",mainCell:".tabcon"});
+})
+$(function(){
+    $("#frm-so").on("submit",function(){
+        if($.trim($("#key").val())==""){
+            alert("请输入搜索关键字");
+            return false;
+        }
+    })
 })

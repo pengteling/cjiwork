@@ -216,6 +216,7 @@ body{
 				float:left;
 				margin-right: 18px;
 				line-height: 34px;
+				font-size: 16px;
 			}
 		}
 		.foot-3of4{
@@ -227,6 +228,7 @@ body{
 				float:left;
 				margin-right: 18px;
 				line-height: 34px;
+				font-size: 16px;
 			}
 		}
 		.foot-4of4{
@@ -426,5 +428,122 @@ body{
 	.fr{
 		margin:78px 28px 0 0;
 
+	}
+}
+
+.nbanner{
+	img{
+		width:100%;
+		height: auto;
+	}
+}
+.catebox{
+	width:1200px;
+	position:relative;
+	box-sizing:border-box;
+	padding:0 16px;
+	.searchbox{
+		position:absolute;
+		right:16px;
+		top:65px;
+		height: 44px;
+		border-bottom:#7e7e7e 1px solid;
+		background:url(../images/ico-search.png) right 4px no-repeat;
+		input[type=text]{
+			line-height: 44px;
+			width:186px;
+		}
+		input[type=submit]{
+			text-indent: -99999px;
+			width:30px;
+			height: 30px;
+			background:none;
+		}
+	}
+	.cate1{
+		padding:60px 0 31px;
+		a{
+			display: inline-block;
+			line-height: 46px;
+			padding:0 14px;	
+			font-size: 18px;		
+			&.on{
+				background:#668cd7;
+				color: #fff;
+			}
+		}
+	}
+	.box-greybg{
+		background:#eee;
+		box-sizing:border-box;
+		padding:24px 36px;
+	}
+	.cate2,.cate3{
+		a{
+			display: inline-block;
+			position:relative;			
+			color:#626262;
+			font-size: 14px;
+			margin: 10px 60px 10px 0;
+			padding-left: 18px;
+			line-height: 14px;
+			&:before{
+				content: '';
+				position:absolute;
+				left: 0;
+				top: 0px;
+				width:10px;
+				height: 10px;
+				background:#fff;
+				border:#b9bdc4 1px solid;
+			}
+			&.on:before{
+				background:#5b89e4;
+				border:#5b89e4 1px solid;
+			}
+		}
+	}
+	.cate2{
+		padding-bottom: 10px;
+	}
+	.cate3{
+		border-top:#b9bdc4 2px solid;
+		padding-top: 10px;
+	}
+}
+.pagediv{
+	height:40px;
+	margin-bottom: 60px;
+	position:relative;
+	.pages{
+		a{
+			display: inline-block;
+			font-size: 18px;
+			line-height: 40px;
+			margin-right: 40px;
+			float: left;
+			color: #1c2124;
+			&.on{
+				color: #5b89e4;
+			}
+		}
+	}
+	.prev,.next{
+		line-height: 40px;
+		position:absolute;
+		font-size: 20px;
+		right:220px;
+		a{
+			color:#1c2124;
+			&:hover{
+				color: #5b89e4;
+			}
+		}
+		
+			
+		
+	}
+	.next{
+		right:115px;
 	}
 }
