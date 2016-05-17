@@ -69,7 +69,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default',['js','image','watchhtml','copyjs','watchcss','watchjs','browser-sync']);
+gulp.task('default',['js','image','html','watchhtml','copyjs','watchcss','watchjs','browser-sync']);
 //拷贝插件到生成的js目录
 gulp.task('copyjs',function(){
 	gulp.src('./bower_components/jquery/dist/*.min.js')	

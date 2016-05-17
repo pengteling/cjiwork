@@ -46,3 +46,7 @@ $(function(){
         }
     })
 })
+
+$(function(){
+    $(".slidebox").slide({titCell:".hd ul li",mainCell:".bd ul"});
+})
