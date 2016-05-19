@@ -49,4 +49,5 @@ $(function(){
 
 $(function(){
     $(".slidebox").slide({titCell:".hd ul li",mainCell:".bd ul"});
+    $(".fmtbox").slide({titCell:".tabtit a",mainCell:".tabbd"});
 })

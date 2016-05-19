@@ -547,3 +547,17 @@ body{
 		right:115px;
 	}
 }
+.curloaction{
+	height:48px;
+	line-height:48px;
+	background:#eee;
+	font-size:16px;
+	color:#626262;
+	a{
+		color: #626262;
+		&.cur{
+			color: #668cd8;
+		}
+	}
+
+}

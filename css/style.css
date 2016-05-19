@@ -825,3 +825,17 @@ body {
 .pagediv .next {
   right: 115px;
 }
+
+.curloaction {
+  height: 48px;
+  line-height: 48px;
+  background: #eee;
+  font-size: 16px;
+  color: #626262;
+}
+.curloaction a {
+  color: #626262;
+}
+.curloaction a.cur {
+  color: #668cd8;
+}
