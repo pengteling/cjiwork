@@ -833,9 +833,56 @@ body {
   font-size: 16px;
   color: #626262;
 }
+.curloaction .main {
+  box-sizing: border-box;
+  padding-left: 16px;
+}
 .curloaction a {
   color: #626262;
 }
 .curloaction a.cur {
   color: #668cd8;
+}
+
+.fmtbox {
+  box-sizing: border-box;
+  padding: 46px 15px 27px 15px;
+  position: relative;
+}
+.fmtbox .tit {
+  border-bottom: #668cd8 1px solid;
+}
+.fmtbox .tit h3 {
+  display: inline-block;
+  height: 58px;
+  line-height: 58px;
+  padding: 0 38px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #fff;
+  background: #668cd8;
+}
+.fmtbox .tabtit {
+  position: absolute;
+  right: 15px;
+  top: 51px;
+}
+.fmtbox .tabtit a {
+  display: inline-block;
+  line-height: 46px;
+  padding: 0 22px;
+  background: #eee;
+  color: #3f403f;
+  font-size: 18px;
+}
+.fmtbox .tabtit a.on {
+  color: #668cd8;
+}
+.fmtbox .tabbd {
+  margin-top: 28px;
+}
+.fmtbox .tabbd .tabcon {
+  width: 1170px;
+  height: 790px;
+  overflow: hidden;
 }
