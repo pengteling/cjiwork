@@ -95,7 +95,7 @@ gulp.task('image', function() {
 var htmlmin = require('gulp-htmlmin');  //压缩html
 gulp.task('html', function() {
   return gulp.src('*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    //.pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'))
 });
 
