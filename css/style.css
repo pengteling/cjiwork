@@ -814,7 +814,7 @@ body {
   line-height: 40px;
   position: absolute;
   font-size: 20px;
-  right: 220px;
+  right: 105px;
 }
 .pagediv .prev a, .pagediv .next a {
   color: #1c2124;
@@ -823,7 +823,7 @@ body {
   color: #5b89e4;
 }
 .pagediv .next {
-  right: 115px;
+  right: 0px;
 }
 
 .curloaction {
@@ -885,4 +885,120 @@ body {
   width: 1170px;
   height: 790px;
   overflow: hidden;
+}
+.fmtbox .slidebox .bd {
+  height: 616px;
+}
+.fmtbox .slidebox .bd ul li img {
+  max-width: 1170px;
+  max-height: 616px;
+  float: left;
+}
+.fmtbox .slidebox .hd {
+  margin-top: 9px;
+  width: 1170px;
+  height: 121px;
+  overflow: hidden;
+  position: relative;
+}
+.fmtbox .slidebox .hd ul {
+  position: absolute;
+  width: 3000px;
+  left: 0;
+}
+.fmtbox .slidebox .hd ul li {
+  width: 229px;
+  height: 121px;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  margin-right: 6px;
+}
+.fmtbox .slidebox .hd ul li img {
+  width: 100%;
+  height: 100%;
+}
+.fmtbox .someintro {
+  width: 100%;
+  border-top: #999 1px solid;
+  border-bottom: #999 1px solid;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fmtbox .someintro span {
+  display: inline-block;
+  width: 33%;
+  line-height: 30px;
+}
+.fmtbox .content {
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+.tjxm {
+  height: 570px;
+  background: #1c2124;
+  border-bottom: #2d3234 2px solid;
+}
+.tjxm .subtit {
+  font-size: 30px;
+  color: #999;
+  text-align: center;
+  height: 102px;
+  padding-top: 60px;
+}
+.tjxm .xmlist {
+  width: 1200px;
+  margin: 0 auto;
+}
+.tjxm .xmlist ul {
+  position: relative;
+  left: 0px;
+  margin-top: 0px;
+  overflow: hidden;
+}
+.tjxm .xmlist li {
+  float: left;
+  margin: 0 15px;
+  text-align: center;
+}
+.tjxm .xmlist li .pic {
+  width: 370px;
+  height: 277px;
+  /* transition: all 0.3s ease-in;			 */
+}
+.tjxm .xmlist li .pic img {
+  width: 100%;
+  height: 100%;
+}
+.tjxm .xmlist li:hover .pic {
+  /* transform: scale(1.03);
+  box-shadow:3px 5px 8px #ccc,-2px 0px 8px #eee; */
+}
+.tjxm .xmlist li .tit {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #999;
+}
+.tjxm .xmlist li .time-views {
+  line-height: 34px;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 35px;
+}
+.tjxm .xmlist li .time-views .time {
+  display: inline-block;
+  height: 16px;
+  background: url(../images/ico-clock.png) no-repeat;
+  line-height: 16px;
+  padding-left: 19px;
+  margin-right: 18px;
+}
+.tjxm .xmlist li .time-views .views {
+  display: inline-block;
+  height: 16px;
+  background: url(../images/ico-eye.png) no-repeat;
+  line-height: 16px;
+  padding-left: 21px;
 }

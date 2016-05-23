@@ -48,6 +48,25 @@ $(function(){
 })
 
 $(function(){
-    $(".slidebox").slide({titCell:".hd ul li",mainCell:".bd ul"});
+    $(".slidebox").slide({titCell:".hd ul li",mainCell:".bd ul",trigger:"click",startFun:function(i,c){
+        console.log(i,c);
+        var ln = 0; //移动个数
+        var left = parseInt($(".slidebox .hd ul").css("left")); //左移距离 n*235
+        ln = left /235;
+        var left_max = (c-1-4) * -235;
+
+        if(i>=4&&left>left_max){
+            //左移1个
+            left = left - 235;
+            $(".slidebox .hd ul").animate({'left':left+'px'},300);
+        }
+        console.log(left);
+        //if($(".slidebox ul").css("left")
+        if(left<0 && ln== -i){
+            left = left + 235;
+            $(".slidebox .hd ul").animate({'left':left+'px'},300);
+            
+        }
+    }});
     $(".fmtbox").slide({titCell:".tabtit a",mainCell:".tabbd"});
 })
